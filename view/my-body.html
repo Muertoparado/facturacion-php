@@ -1,56 +1,19 @@
-<div class="container rounded bg-gradient bg-warning" style="--bs-bg-opacity: .4; border-style: dashed;">
-    <div class="row">
-        <div class="col text-center"> <h2>Invoice Detail</h2></div>
+<div class="container bg-secondary bg-gradient rounded" style="--bs-bg-opacity: .4; border-style: dashed;">
+    <div id="products" class="row gy-2 py-4 my-2 overflow-auto" style="height: 250px;">
+        <div class="col-md-12 text-center"><h2>Invoice header</h2></div>
+        <my-product-details></my-product-details>
     </div>
-    <div class="row cols-12-sm-">
-        <div class="col-sm-2">
-            <label for="productid" class="form-label">Product Id </label>
-            <input type="number" class="form-control" name="productid " id="productid" placeholder="Product Id">
+</div>
+<div class="container g-0">
+    <div class="row row-cols-sm-3 mt-3">
+        <div>
+            <button type="button" class="btn w-100 btn-lg btn-outline-info">Send</button>
         </div>
-        <div class="col-sm-2">
-            <label for="product-name" class="form-label">Product Name</label>
-            <input type="text" class="form-control" name="productname" id="product-name" placeholder="Product Name">
+        <div>
+            <button type="button" class="btn w-100 btn-lg btn-outline-secondary">Details</button>
         </div>
-        <div class="col-sm-2">
-            <label for="amount" class="form-label">Amount</label>
-            <input type="number" class="form-control" name="amount" id="amount" placeholder="Amount">
-        </div>
-        <div class="col-sm-2">
-            <label for="unitvalue" class="form-label">Unit value</label>
-            <input type="number" class="form-control" name="unitvalue" id="unitvalue" placeholder="Unit value">
-        </div>
-        <div class="col-sm-2">
-            <button>+</button>
-        </div>
-        <div class="col-sm-2">
-            <button>-</button>
-        </div>
-    </div>
-    <div class="row cols-12">
-        <div class="col text-center"> <h2>Invoice Detail</h2></div>
-    </div>
-    <div class="row cols-12-sm-">
-        <div class="col-sm-2">
-            <label for="productid" class="form-label">Product Id </label>
-            <input type="number" class="form-control" name="productid " id="productid" placeholder="Product Id">
-        </div>
-        <div class="col-sm-2">
-            <label for="product-name" class="form-label">Product Name</label>
-            <input type="text" class="form-control" name="productname" id="product-name" placeholder="Product Name">
-        </div>
-        <div class="col-sm-2">
-            <label for="amount" class="form-label">Amount</label>
-            <input type="number" class="form-control" name="amount" id="amount" placeholder="Amount">
-        </div>
-        <div class="col-sm-2">
-            <label for="unitvalue" class="form-label">Unit value</label>
-            <input type="number" class="form-control" name="unitvalue" id="unitvalue" placeholder="Unit value">
-        </div>
-        <div class="col-sm-2">
-            <button>+</button>
-        </div>
-        <div class="col-sm-2">
-            <button>-</button>
+        <div>
+            <button type="button" class="btn w-100 btn-lg btn-outline-warning">Add</button>
         </div>
     </div>
 </div>
