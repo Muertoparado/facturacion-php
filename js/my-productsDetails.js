@@ -1,11 +1,12 @@
 import styles from "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" assert { type: "css" };
+
 export class myProductDetails extends HTMLElement{
     constructor(){
         super();
         document.adoptedStyleSheets.push(styles);
     }
     async components() {
-        return await (await fetch("view/my-productDetails.html")).text();
+        return await (await fetch("view/my-productsDetails.html")).text();
     }
     selection(e) {
         let $ = e.target;
@@ -16,8 +17,6 @@ export class myProductDetails extends HTMLElement{
                 inputs.forEach(element => {
                     if (element.name == "amount" && element.value == 0) {
                         box.parentNode.remove();
-                        console.log("vacio");
-                      //  element.name="amount";
                     } else if (element.name == "amount") {
                         element.value--;
                     }
@@ -26,7 +25,6 @@ export class myProductDetails extends HTMLElement{
                 inputs.forEach(element => {
                     if (element.name == "amount") {
                         element.value++;
-                        console.log("add +");
                     }
                 });
             }
