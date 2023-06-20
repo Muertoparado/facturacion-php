@@ -1,6 +1,6 @@
 <?php 
-    namespace App;
-    class Database{
+    //namespace App;
+    /* class credentials{
         private $conn;
         protected static $settings = Array(
             "mysql" => Array(
@@ -8,7 +8,7 @@
                     'host' => '172.16.48.210',
                     'username' => 'sputnik',
                     'database' => 'db_hunter_facture_nicolasr',
-                    'password' => '',
+                    'password' => 'Sp3n1kC@',
                     'collation' => 'utf8mb4_unicode_ci',
                     'flags' => [
                         // Turn off persistent connections
@@ -39,7 +39,7 @@
                             // Set character set
                             \PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
                         ]                
-                ) */
+                ) 
 
         );
         public function __construct($args = []) {
@@ -60,5 +60,16 @@
             }
             return $this->conn;
         }       
+    } */
+
+
+    abstract class credentials{
+        protected $host = '172.16.48.210';
+        private $user = 'sputnik';
+        private $password = 'Sp3tn1kC@';
+        protected $dbname = 'db_hunter_facture_nicolasr';
+        public function __get($name){
+            return $this->{$name};
+        }
     }
-?>
+?> 
