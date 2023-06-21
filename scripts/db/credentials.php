@@ -23,7 +23,7 @@ abstract class connect extends credentials implements environments{
                     'host' => '172.16.48.210',
                     'username' => 'sputnik',
                     'database' => 'db_hunter_facture_nicolasr',
-                    'password' => '',
+                    'password' => 'Sp3n1kC@',
                     'collation' => 'utf8mb4_unicode_ci',
                     'flags' => [
                         // Turn off persistent connections
@@ -54,6 +54,7 @@ abstract class connect extends credentials implements environments{
                             // Set character set
                             \PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
                         ]                
+                ) 
                 ) 
 
         );

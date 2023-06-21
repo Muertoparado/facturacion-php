@@ -12,8 +12,8 @@
     class Database{
         private $conn;
         private $settings;
-        public function __construct($setting) {
-            $this->settings = $setting;
+        public function __construct($settings) {
+            $this->settings = $settings;
         }
         
         public function getConnection($dbKey) {

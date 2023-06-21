@@ -30,6 +30,16 @@ function autoload($class) {
         if (file_exists($file)) {
             require $file;
             break;
+    // Convertir el nombre de la clase en un nombre de archivo relativo
+    $classFile = str_replace('\\', '/', $class) . '.php';
+
+    // Recorrer los directorios y buscar el archivo de la clase
+    foreach ($directories as $directory) {
+        $file = $directory.$classFile;
+        // Verificar si el archivo existe y cargarlo
+        if (file_exists($file)) {
+            require $file;
+            break;
         }
     }
 }
@@ -37,5 +47,6 @@ spl_autoload_register('autoload');
 
 client::getInstance(json_decode(file_get_contents("php://input"), true));
 
-
+//client::getInstance();
+$obj = new connect();
 ?>
